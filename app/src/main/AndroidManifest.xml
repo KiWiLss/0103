@@ -20,6 +20,8 @@
         <activity android:name=".ui.ViewActivity"/>
         <activity android:name=".ui.PopupActivity"/>
         <activity android:name=".ui.MoonMenuActivity"/>
+        <activity android:name=".ui.AreMenuActivity"/>
+
     </application>
 
 </manifest>

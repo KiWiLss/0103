@@ -28,8 +28,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/composer_music"
         android:scaleType="center"
-        android:layout_marginTop="200dip"
-        android:layout_marginLeft="100dp"/>
+        android:layout_marginTop="300dip"
+        />
 
     <ImageView
         android:id="@+id/iv_sleep"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/composer_sleep"
         android:scaleType="center"
-        android:layout_marginTop="100dip"
-        android:layout_marginLeft="200dp"/>
+        android:layout_marginTop="400dip"
+       />
 
 </RelativeLayout>

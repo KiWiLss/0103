@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.magicsoft.testcode.ui.AreMenuActivity;
 import com.magicsoft.testcode.ui.MoonMenuActivity;
 import com.magicsoft.testcode.ui.PopupActivity;
 import com.magicsoft.testcode.ui.ViewActivity;
@@ -30,5 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void moon(View view) {
         startActivity(new Intent(this, MoonMenuActivity.class));
+    }
+
+    public void arc(View view) {
+        startActivity(new Intent(this, AreMenuActivity.class));
     }
 }

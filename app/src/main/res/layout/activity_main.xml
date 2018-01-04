@@ -29,7 +29,11 @@
             android:text="moon"
             android:onClick="moon"/>
 
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="arc"
+            android:onClick="arc"/>
     </LinearLayout>
 
 

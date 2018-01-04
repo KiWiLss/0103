@@ -1,11 +1,13 @@
 package com.magicsoft.testcode.ui;
 
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -48,28 +50,114 @@ public class ViewActivity extends AppCompatActivity {
             }
         });
 
+        ivmenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //openAll();
+
+            }
+        });
+
+        getWidthHeight();
+    }
+
+    private void getWidthHeight() {
+
+        ViewTreeObserver viewTreeObserver = mIvSleep.getViewTreeObserver();
+
+        viewTreeObserver.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+            @Override
+            public boolean onPreDraw() {
+                int height = mIvSleep.getMeasuredHeight();
+                int width = mIvSleep.getMeasuredWidth();
+
+                Log.e(TAG, "onPreDraw: "+height+"|"+width );
+                return true;
+            }
+        });
+
+
+        viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                int height = mIvSleep.getMeasuredHeight();
+                int width = mIvSleep.getMeasuredWidth();
+
+                Log.e(TAG, "onGlobalLayout: "+height+"|"+width );
+            }
+        });
+
+    }
+
+    boolean isOpen;
+    private void openAll() {
+
+        if (isOpen){
+            ivcamera.setVisibility(View.VISIBLE);
+            ivmusic.setVisibility(View.VISIBLE);
+            mIvSleep.setVisibility(View.VISIBLE);
+            ObjectAnimator translationY1 = ObjectAnimator.ofFloat(mIvSleep, "translationY", 0);
+            ObjectAnimator translationY2 = ObjectAnimator.ofFloat(ivcamera, "translationY", 0);
+            ObjectAnimator translationY3 = ObjectAnimator.ofFloat(ivmusic, "translationY", 0);
+
+
+//                translationY1.setDuration(2000);
+//                translationY2.setDuration(2000);
+//                translationY3.setDuration(2000);
+//
+//                translationY3.start();
+//                translationY2.start();
+//                translationY1.start();
+                isOpen=false;
+
+            AnimatorSet animatorSet = new AnimatorSet();
+            animatorSet.play(translationY1).with(translationY2).after(translationY3);
+            animatorSet.setDuration(2000);
+            animatorSet.start();
+
+        }else {
+
+
+
+
+
+        }
+
     }
 
     private void initView() {
         getWindow().getDecorView().post(new Runnable() {
             @Override
             public void run() {
-                final int caremaY = ivmenu.getTop() - ivcamera.getTop();
+
+                Log.e(TAG, "run: "+mIvSleep.getWidth()+"||"+mIvSleep.getHeight() );
+
+                Log.e(TAG, "run: ###"+mIvSleep.getMeasuredWidth()+"||"+mIvSleep.getMeasuredHeight() );
+
+               /* final int caremaY = ivmenu.getTop() - ivcamera.getTop();
                 final int height = ivcamera.getHeight();
-                Log.e(TAG, "run: "+caremaY +"|"+height);
-                ivcamera.setTranslationY(caremaY);
+
+
 //                ivcamera.setTranslationY(0);
 
+                int musicY = ivmenu.getTop() - ivmusic.getTop();
+                int sleepY = ivmenu.getTop() - mIvSleep.getTop();
 
-                mIvSleep.setPivotX(0);
-                mIvSleep.setPivotY(0);
-              mIvSleep.setRotation(90);
+                Log.e(TAG, "run: "+caremaY +"|"+height+"|"+musicY+"|"+sleepY);
+
+                ivcamera.setTranslationY(caremaY);
+                ivmusic.setTranslationY(musicY);
+                mIvSleep.setTranslationY(sleepY);
 
 
-
-                ObjectAnimator translationY = ObjectAnimator.ofFloat(ivcamera, "translationY", 0);
-                translationY.setDuration(2000);
-                translationY.start();
+                ivcamera.setVisibility(View.GONE);
+                ivmusic.setVisibility(View.GONE);
+                mIvSleep.setVisibility(View.GONE);
+                isOpen=true;*/
+//                ObjectAnimator translationY = ObjectAnimator.ofFloat(ivcamera, "translationY", 0);
+//                translationY.setDuration(2000);
+//                translationY.start();
 
 
 //                ObjectAnimator rotation = ObjectAnimator.ofFloat(mIvSleep, "rotation", 30);
