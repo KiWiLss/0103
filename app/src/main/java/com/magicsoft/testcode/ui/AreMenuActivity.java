@@ -54,6 +54,8 @@ public class AreMenuActivity extends AppCompatActivity {
             });// Add a menu item
         }
 
+
+
     }
 
 
