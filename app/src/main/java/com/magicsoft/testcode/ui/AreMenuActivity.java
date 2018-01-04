@@ -1,8 +1,12 @@
 package com.magicsoft.testcode.ui;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.ArrayMap;
+import android.util.Log;
+import android.util.SparseArray;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -54,6 +58,31 @@ public class AreMenuActivity extends AppCompatActivity {
             });// Add a menu item
         }
 
+        SparseArray<String> array = new SparseArray<>();
+        array.put(0,"0");
+        array.put(1,"1");
+        array.put(2,"2");
+
+        for (int i = 0,count=array.size(); i<count; i++) {
+            String value = array.get(i);
+            Log.e("MMM", "onCreate: "+value );
+        }
+
+        array.remove(8);
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            ArrayMap<String, String> map = new ArrayMap<>();
+
+
+            map.put("0","0");
+            map.put("1","1");
+            map.put("2","2");
+            map.put("3","3");
+
+
+
+        }
 
 
     }
