@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ui.ViewActivity"/>
+        <activity android:name=".ui.PopupActivity"/>
+        <activity android:name=".ui.MoonMenuActivity"/>
     </application>
 
 </manifest>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.magicsoft.testcode.widget.MoonMenu
+        android:id="@+id/mm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu_position="left_top"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/composer_music"
+            android:layout_marginTop="100dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/composer_camera"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/composer_sleep"/>
+
+    </com.magicsoft.testcode.widget.MoonMenu>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
