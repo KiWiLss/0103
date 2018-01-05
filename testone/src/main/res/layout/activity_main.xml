@@ -11,7 +11,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Album!"
+        android:onClick="album"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -67,41 +68,4 @@
 
     </com.magicsoft.testone.widget.ArcMenu>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <com.magicsoft.testone.widget.ArcMenu
-        android:id="@+id/am_menu"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="30dp"
-        app:am_position="left_bottom"
-        app:am_radius="90dp">
-
-        <TextView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/circle_menu"
-            android:gravity="center"
-            android:text="P" />
-
-        <TextView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/circle_menu"
-            android:gravity="center"
-            android:text="R" />
-
-        <TextView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/circle_menu"
-            android:gravity="center"
-            android:text="M" />
-    </com.magicsoft.testone.widget.ArcMenu>
 </LinearLayout>
