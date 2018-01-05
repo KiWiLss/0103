@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.magicsoft.testcode.ui.AreMenuActivity;
 import com.magicsoft.testcode.ui.MoonMenuActivity;
 import com.magicsoft.testcode.ui.PopupActivity;
+import com.magicsoft.testcode.ui.ShadowActivity;
 import com.magicsoft.testcode.ui.ViewActivity;
 import com.magicsoft.testcode.ui.transition.TransitonActivity;
 
@@ -40,5 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void transition(View view) {
         startActivity(new Intent(this, TransitonActivity.class));
+    }
+
+    public void shadow(View view) {
+        startActivity(new Intent(this, ShadowActivity.class));
     }
 }

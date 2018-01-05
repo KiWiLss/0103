@@ -23,6 +23,7 @@
         <activity android:name=".ui.AreMenuActivity"/>
         <activity android:name=".ui.transition.TransitonActivity"/>
         <activity android:name=".ui.transition.DetailActivity"/>
+        <activity android:name=".ui.ShadowActivity"/>
 
     </application>
 
