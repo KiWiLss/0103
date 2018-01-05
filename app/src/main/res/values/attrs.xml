@@ -25,4 +25,9 @@
     <declare-styleable name="MoonMenu">
         <attr name="menu_position" />
     </declare-styleable>
+
+    <declare-styleable name="app">
+        <attr name="bottomDragVisibleHeight" format="dimension" />
+        <attr name="bototmExtraIndicatorHeight" format="dimension" />
+    </declare-styleable>
 </resources>
