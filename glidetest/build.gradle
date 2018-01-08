@@ -37,4 +37,7 @@ dependencies {
 
     compile 'com.github.bumptech.glide:glide:4.3.0'
     compile 'jp.wasabeef:glide-transformations:3.0.1'
+
+    compile 'com.deep:deepimg:1.0'
+    compile 'com.gcssloop.widget:rclayout:1.4.6@aar'
 }
