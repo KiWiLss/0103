@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.magicsoft.testone.album.AlbumActivity;
 import com.magicsoft.testone.image.IconActivity;
 import com.magicsoft.testone.widget.ArcMenu;
 
@@ -26,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
                 case 0://imagewatcher图片列表
                     startActivity(new Intent(MainActivity.this, IconActivity.class));
                     break;
-                case 1:
+                case 1://album
+                    startActivity(new Intent(MainActivity.this, AlbumActivity.class));
                     break;
             }
         }

@@ -1,2 +1,2 @@
-include ':app', ':testone'
+include ':app', ':testone', ':glidetest'
 include ':library'
