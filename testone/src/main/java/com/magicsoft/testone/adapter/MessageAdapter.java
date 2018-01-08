@@ -19,6 +19,8 @@ import java.util.List;
 
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
+import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
+
 /**
  * <pre>
  *     author : Lss winding
@@ -76,8 +78,8 @@ public class MessageAdapter extends RecyclerView.Adapter {
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.placeholder(R.drawable.default_avatar);
             requestOptions.transform(mCropCircleTransformation);
-            Glide.with(itemView.getContext()).load(mData.getAvatar()).apply(requestOptions).into(iAvatar);
-            //Glide.with(itemView.getContext()).load(mData.getAvatar()).apply(bitmapTransform(new GrayscaleTransformation())).into(iAvatar);
+            //Glide.with(itemView.getContext()).load(mData.getAvatar()).apply(requestOptions).into(iAvatar);
+            Glide.with(itemView.getContext()).load(mData.getAvatar()).apply(bitmapTransform(new CropCircleTransformation())).into(iAvatar);
 
 
 //            Picasso.with(itemView.getContext()).load(mData.getAvatar()).placeholder(R.drawable.default_avatar)
