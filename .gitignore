@@ -10,4 +10,5 @@
 gradle.properties
 
 
-!/glidetest/src/main/java/com/magicsoft/glidetest/ui/RecyclerActivity2.java
+
+/glidetest/src/main/java/com/magicsoft/glidetest/ui/IgnoreTest.java
