@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import com.deep.imagelib.beans.CompressStyle;
 import com.deep.imagelib.beans.ImageConfigure;
 import com.magicsoft.glidetest.ui.RecyclerActivity;
+import com.magicsoft.glidetest.ui.RecyclerActivity2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -78,5 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void recycler(View view) {
         startActivity(new Intent(this,RecyclerActivity.class));
+    }
+    public void recycler2(View view) {
+        startActivity(new Intent(this,RecyclerActivity2.class));
     }
 }

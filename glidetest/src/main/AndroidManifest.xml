@@ -23,7 +23,9 @@
         <activity android:name=".ButtonActivity"/>
         <activity android:name=".ui.RecyclerActivity"/>
         <activity android:name=".ui.RecyclerActivity2"/>
+        <activity android:name=".ui.pull.IosRecyclerActivity"/>
 
+        <activity android:name=".ui.pull.NormalRecyclerActivity"/>
     </application>
 
 </manifest>
